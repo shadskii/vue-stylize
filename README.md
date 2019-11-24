@@ -1,6 +1,7 @@
 # vue-stylize
 This plugin provides a simple directive to apply css to text 🙂
 
+[![NPM version](https://img.shields.io/npm/v/vue-stylize.svg?style=flat)](https://www.npmjs.com/package/vue-stylize) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Installation
 Install `vue-stylize`
 
