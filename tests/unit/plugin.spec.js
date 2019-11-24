@@ -13,7 +13,7 @@ describe('plugin.js', () => {
     const wrapper = mount(
         {
           template: '<div v-stylize="styles"></div>',
-          props: ['katex'],
+          props: ['styles'],
         },
         {
           localVue,

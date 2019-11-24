@@ -2,27 +2,24 @@
 const katexDirective = {
   name: 'stylize',
   directive: (el, binding) => {
-    const escapeChar = '||';
+    const begin = '[[';
+    const end = ']]';
 
-    let colors = binding.value;
+    let styles = binding.value;
     if (!Array.isArray(binding.value)) {
-      if (binding.value) {
-        colors = [binding.value];
-      } else {
-        throw new TypeError('v-stylize requires an argument class');
-      }
+      styles = [binding.value];
     }
     let text = el.innerHTML;
     let i = 0;
-    while (text.includes(escapeChar)) {
-      let color = colors[i++];
-      if (!color) {
+    while (text.includes(begin) && text.includes(end)) {
+      let style = styles[i++];
+      if (!style) {
         i = 0;
-        color = colors[i];
+        style = styles[i];
       }
       text = text
-          .replace(escapeChar, `<span class="${color}">`)
-          .replace(escapeChar, '</span>');
+          .replace(begin, `<span class="${style}">`)
+          .replace(end, '</span>');
     }
     el.innerHTML = text;
   },
