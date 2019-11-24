@@ -2,13 +2,12 @@
   "name": "vue-stylize",
   "version": "0.0.1",
   "description": "Vue plugin to fluently style ",
-  "main": "dist/vue-katex.cjs.js",
-  "module": "dist/vue-katex.es.js",
-  "unpkg": "dist/vue-katex.umd.js",
+  "main": "dist/vue-stylize.cjs.js",
+  "module": "dist/vue-stylize.es.js",
+  "unpkg": "dist/vue-stylize.umd.js",
   "files": [
     "dist",
     "vetur/attributes.json",
-    "vetur/tags.json"
   ],
   "repository": {
     "type": "git",
@@ -25,9 +24,9 @@
   "author": "Jake Hassel <jake.k.hassel@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lucpotage/vue-katex/issues"
+    "url": "https://github.com/shadskii/vue-stylize/issues"
   },
-  "homepage": "https://github.com/lucpotage/vue-katex#readme",
+  "homepage": "https://github.com/shadskii/vue-stylize#readme",
   "peerDependencies": {
     "vue": "^2.6.10"
   },

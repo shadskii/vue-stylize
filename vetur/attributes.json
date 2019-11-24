@@ -1,0 +1,6 @@
+{
+  "v-stylize":{
+    "type": "string || string[]",
+    "description": "Apply a css class or an array of classes to escaped elements."
+  }
+}
