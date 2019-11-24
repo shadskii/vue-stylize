@@ -7,7 +7,7 @@
   "unpkg": "dist/vue-stylize.umd.js",
   "files": [
     "dist",
-    "vetur/attributes.json",
+    "vetur/attributes.json"
   ],
   "repository": {
     "type": "git",
