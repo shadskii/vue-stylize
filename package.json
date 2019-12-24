@@ -1,6 +1,6 @@
 {
   "name": "vue-stylize",
-  "version": "0.0.1-alpha",
+  "version": "0.0.2-alpha",
   "description": "Vue plugin to fluently style ",
   "main": "dist/vue-stylize.cjs.js",
   "module": "dist/vue-stylize.es.js",
