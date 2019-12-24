@@ -18,7 +18,7 @@ describe('plugin.js', () => {
         {
           localVue,
           propsData: {styles: 'hello world'},
-        }
+        },
     );
     expect(wrapper.exists()).toBe(true);
   });
