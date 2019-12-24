@@ -47,7 +47,9 @@ jobs:
         with:
           cmd: build
       - name: Publish to npm 
-        run: npm publish
+        run: |
+          npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
@@ -68,6 +70,8 @@ jobs:
         uses: borales/actions-yarn@v2.0.0
         with:
           cmd: build
-      - run: npm publish
+      - run: |
+          npm config set //npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
