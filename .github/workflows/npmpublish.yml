@@ -52,26 +52,3 @@ jobs:
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-
-  publish-gpr:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-          registry-url: https://npm.pkg.github.com/
-      - name: Install Dependencies
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: install --frozen-lockfile
-      - name: Build package
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: build
-      - run: |
-          npm config set //npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN
-          npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
